@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Invalid input. Please enter a valid number.');
             modal.classList.add('hidden')
             return;
-            
+
         }
         const currentMoney = parseFloat(moneyDisplay.textContent) || 0;
         if (donationAmount > currentMoney) {
@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const now = new Date();
         const timeString = now.toLocaleString('en-US', { timeZoneName: 'short' });
         const messageDiv = document.createElement('div');
-        messageDiv.classList.add('donationMessage', 'mt-4', 'p-4', 'border', 'rounded-lg', 'bg-gray-100', 'flex' ,'max-w-[1300px]','flex-col' ,'w-[900px]', 'mx-auto');
+        messageDiv.classList.add('donationMessage', 'mt-4', 'p-4', 'border', 'rounded-lg', 'bg-gray-100', 'flex' ,'max-w-[1300px]','flex-col' ,'lg:w-[900px]', 'mx-auto');
         const donationText = document.createElement('p');
-        donationText.innerHTML = `<strong>${donationAmount} BDT</strong> is donated for <strong>${sectionName}</strong>, Bangladesh.`;
+        donationText.innerHTML = `<strong>${donationAmount} Taka</strong> is Donated for <strong>${sectionName}</strong>, Bangladesh.`;
         const timeText = document.createElement('p');
         timeText.innerHTML = `Donated on ${timeString}`;
         timeText.style.fontSize = '12px';
@@ -81,13 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
         historySection.appendChild(messageDiv);
     }
     document.querySelector('.modalBtn1').addEventListener('click', function() {
-        processDonation(1, 'Noakhali');
+        processDonation(1, 'Flood Relief in Noakhali');
     });
     document.querySelector('.modalBtn2').addEventListener('click', function() {
-        processDonation(2, 'Sylhet');
+        processDonation(2, 'Flood Relief in Feni');
     });
     document.querySelector('.modalBtn3').addEventListener('click', function() {
-        processDonation(3, 'Chittagong');
+        processDonation(3, 'Aid for Injured in the Quota Movement');
     });
 });
 
